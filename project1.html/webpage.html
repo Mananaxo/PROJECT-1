@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherPage</title>
+    <style>
+      h1 {
+        color: #1a64d6;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 37px;
+        line-height: 48px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 34px;
+        line-height: 48px;
+        font-weight: 400;
+        padding-bottom: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      ul {
+        color: black;
+        text-align: center;
+        list-style: none;
+        font-size: 19px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        padding: 10px 0px;
+        border-radius: 10px;
+        max-width: 400px;
+        margin: 0 auto;
+        unicode-bidi: isolate;
+      }
+      .rainy-day {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      .cloudy-day {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      .sunny-day {
+        padding-bottom: 30px;
+        padding-top: 30px;
+      }
+      .rainy-day:hover {
+        background-color: #fffbef;
+        color: black;
+        cursor: pointer;
+      }
+      .cloudy-day:hover {
+        background-color: #fffbef;
+        color: black;
+        cursor: pointer;
+      }
+      .sunny-day:hover {
+        background-color: #fffbef;
+        color: black;
+        cursor: pointer;
+      }
+      button {
+        color: white;
+        display: block;
+        margin: 20px auto;
+        font-size: 16px;
+        line-height: 22px;
+        border: 2px solid black;
+        background: #1a64d6;
+        padding: 16px 24px;
+        border-radius: 30px;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: white;
+        color: #1a64d6;
+        transition: all 200ms ease-in-out;
+      }
+      p {
+        color: #545454;
+        opacity: 0.7;
+        text-align: center;
+        font-family: monospace;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      &#x1F324;
+      <br />
+      Currently 21&deg; in Tokyo
+    </h1>
+    <h2>
+      13&deg; /
+      <strong> 23&deg; </strong>
+    </h2>
+    <ul>
+      <li class="rainy-day">
+        <strong> &#x1F327; Tomorrow </strong>
+        <br />
+        <br />
+        10&deg; /
+        <strong> 22&deg; </strong>
+      </li>
+      <br />
+      <li class="cloudy-day">
+        <strong> &#x1F325; Saturday </strong>
+        <br />
+        <br />
+        15&deg; / <strong> 17&deg; </strong>
+      </li>
+      <br />
+      <li class="sunny-day">
+        <strong> &#9728;&#65039; Sunday </strong>
+        <br />
+        <br />
+        25&deg; /
+        <strong> 28&deg; </strong>
+      </li>
+    </ul>
+    <button>Change city</button>
+    <p>Coded By Mphatso Phiri</p>
+  </body>
+</html>
