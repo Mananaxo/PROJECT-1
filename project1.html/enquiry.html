@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enquiries</title>
+  <!-- Link to external CSS file -->
+  <link href="style.css" rel="stylesheet" />
+  <!-- Link to external JavaScript file, loaded with defer -->
+  <script defer src="javascript.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- Logo linking back to home -->
+    <a href="home.html">
+      <img src="imageshefit/logo.png" width="100" alt="SheFit Logo" />
+    </a>
+    <h1>SheFit Fitness Gym</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="signup.html">Signup</a></li>
+        <li><a href="swimming.html">Swimming</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="enquiries.html">Enquiries</a></li>
+      </ul>
+    </nav>
+    <hr />
+  </header>
+
+  <main>
+    <h1>If you have any questions or comments, please let us know.</h1>
+
+    <!-- Enquiry form with ARIA attributes for accessibility -->
+    <form id="enquiry-form" novalidate aria-describedby="formError" aria-live="polite" aria-atomic="true">
+      <div>
+        <!-- Full Name input with aria-describedby linked to error message -->
+        <label for="name">Full Name:<span aria-hidden="true">*</span></label><br />
+        <input type="text" id="name" name="name" aria-required="true" aria-describedby="nameError" />
+        <!-- Inline error message placeholder, role alert for screen readers -->
+        <small id="nameError" class="error-message" role="alert" aria-live="assertive"></small>
+      </div>
+      <br />
+      <div>
+        <!-- Email input with ARIA attributes -->
+        <label for="email">Email:<span aria-hidden="true">*</span></label><br />
+        <input type="email" id="email" name="email" aria-required="true" aria-describedby="emailError" />
+        <small id="emailError" class="error-message" role="alert" aria-live="assertive"></small>
+      </div>
+      <br />
+      <div>
+        <!-- Comments textarea with ARIA attributes -->
+        <label for="comments">Please Enter Comment:<span aria-hidden="true">*</span></label><br />
+        <textarea id="comments" name="comments" placeholder="Enter your comments..." rows="4" cols="40"
+          aria-required="true" aria-describedby="commentsError"></textarea>
+        <small id="commentsError" class="error-message" role="alert" aria-live="assertive"></small>
+      </div>
+      <br />
+      <!-- Submit button -->
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Popup container for success/error messages -->
+    <div id="popup" class="popup" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+    <!-- Spacer to push footer down -->
+    <div class="push-footer"></div>
+  </main>
+
+  <footer>
+    <hr />
+    <p><strong>Privacy Statement:</strong> SheFit Fitness Gym is committed to protecting your personal information. We
+      do not share or sell your details to any third parties.</p>
+    <p>&copy; 2025 Mphatso Phiri. All rights reserved.</p>
+    <p>
+      Follow us:
+      <a href="https://facebook.com" target="_blank" title="Facebook">
+        <img src="imageshefit/facebooklogo.png" width="20" alt="Facebook" />
+      </a>
+      <a href="https://instagram.com" target="_blank" title="Instagram">
+        <img src="imageshefit/instagramlogo.png" width="20" alt="Instagram" />
+      </a>
+      <a href="https://tiktok.com" target="_blank" title="TikTok">
+        <img src="imageshefit/tiktoklogo.png" width="20" alt="TikTok" />
+      </a>
+    </p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Pop-up with Validation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border: 2px solid #7a44f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(122, 68, 245, 0.7);
+        z-index: 10000;
+        display: none;
+        font-weight: bold;
+        color: #3b0967;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="signup-form">
+      <input type="text" id="name" required placeholder="Name" />
+      <button type="submit">Register</button>
+    </form>
+    <div id="popup" class="popup"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("signup-form");
+        const popup = document.getElementById("popup");
+        const nameInput = document.getElementById("name");
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault(); // Prevent page reload
+
+          const nameValue = nameInput.value.trim(); // Get trimmed input value
+
+          if (nameValue.length < 2) {
+            // Show error message if input is invalid
+            showPopup("Error: Please enter at least 2 characters.");
+            speak("Error: Please enter at least 2 characters.");
+          } else {
+            // Show success message if input is valid
+            showPopup("Form submitted successfully!");
+            speak("Form submitted successfully!");
+            form.reset(); // Reset the form
+          }
+        });
+
+        function showPopup(message) {
+          popup.textContent = message;
+          popup.style.display = "block";
+          setTimeout(() => {
+            popup.style.display = "none";
+          }, 3000); // Hide after 3 seconds
+        }
+
+        function speak(message) {
+          if ("speechSynthesis" in window) {
+            const utterance = new SpeechSynthesisUtterance(message);
+            utterance.lang = "en-US";
+            window.speechSynthesis.speak(utterance);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
